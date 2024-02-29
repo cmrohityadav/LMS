@@ -7,7 +7,10 @@ const router=Router();
 
 router.route("/register").post(register)
 router.route("/login").post(login)
+console.log("hello")
 router.route("/logout").get(logout)
+
+// secured routes
 router.route("/me").post(isLogged,getProfile)
 
 

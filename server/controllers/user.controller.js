@@ -79,16 +79,25 @@ const login=async(req,res,next)=>{
 
 }
 
-const logout=(req,res,next)=>{
-     res.cookie("token",null,{
-        sucure:true,
-        maxAge:0,
-        httpOnly:true
-     })
-     .status(200).json({
-        success:true,
-        message:"User Logged Out successfulluy"
-     })
+const logout=async(req,res,next)=>{
+
+   
+
+
+    try {
+        return res
+            .status(200)
+            .clearCookie("token",null,{
+                expires:new Date(),
+                httpOnly:true,})
+            .json({
+                success:true,
+                message:"logout"
+            })
+    } catch (error) {
+
+         return  next(new AppError(error.message,400))
+    }
 }
 
 const getProfile=async(req,res,next)=>{
