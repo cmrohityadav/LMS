@@ -1,0 +1,26 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Learning Mangement System Backend",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cmrohityadav/LMS/tree/main/server"
+  },
+  "keywords": [
+    "backend",
+    "nodejs",
+    "express",
+    "mongoDb"
+  ],
+  "author": "Rohit Chhabiraj Yadav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cmrohityadav/lms/issues"
+  },
+  "homepage": "https://github.com/cmrohityadav/lms#readme"
+}
