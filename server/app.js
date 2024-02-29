@@ -17,6 +17,7 @@ app.use(morgan("dev"))
 
 // import router
 import userRouter from "./routes/user.Router.js"
+import errorMiddleware from "./middlewares/error.middleware.js";
 
 // routes 
 app.use('/api/v1/user',userRouter)
@@ -28,8 +29,10 @@ app.use('/ping',function(req,res){
     res.send("/pong")
     
 })
-app.all("*",(req,res)=>{
-    res.status(404).send("OOPS !! 404 page not found")
-})
+// app.all("*",(req,res)=>{
+//     res.status(404).send("OOPS !! 404 page not found")
+// })
+
+app.use(errorMiddleware)
 
 export {app}
