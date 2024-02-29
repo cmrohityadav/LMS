@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 import { dbName } from "./dblms.js";
+mongoose.set("strictQuery",false)
 
 export const connectDB=async()=>{
 

@@ -13,16 +13,21 @@ app.use(cors({
 
 app.use(cookieParser())
 app.use(morgan("dev"))
+
+
+// import router
+import userRouter from "./routes/user.Router.js"
+
+// routes 
+app.use('/api/v1/user',userRouter)
+
+
+
+// testing routes
 app.use('/ping',function(req,res){
     res.send("/pong")
     
 })
-
-
-// routes 
-
-
-
 app.all("*",(req,res)=>{
     res.status(404).send("OOPS !! 404 page not found")
 })
