@@ -3,7 +3,7 @@ import AppError from "../utils/error.util.js";
 import  Jwt  from "jsonwebtoken";
 const isLogged=async(req,res,next)=>{
         const {token}=req.cookies;
-        console.log("token",token)
+        // console.log("token",token)
         if(!token){
             return  next(new AppError("unAthorize Access please login or signup",400))
         }
