@@ -26,10 +26,12 @@ cloudinary.config({
 
 // import router
 import userRouter from "./routes/user.Router.js"
+import courseRouter from "./routes/course.Router.js"
 import errorMiddleware from "./middlewares/error.middleware.js";
 
 // routes 
 app.use('/api/v1/user',userRouter)
+app.use('/api/v1/course',courseRouter)
 
 
 
