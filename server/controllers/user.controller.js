@@ -259,13 +259,16 @@ const changePassword=async(req,res,next)=>{
 const updateUser=async(req,res,next)=>{
 
     const {fullName}=req.body
-    const {id}=req.user.id;
+    // console.log(req.body)
+    // console.log(req.user)
+    const {id}=req.user;
+    // console.log(id)
     const user=await User.findById(id);
     if(!user){
         return next(new AppError("User does not exists",400))
     }
 
-    if(req.fullName){
+    if(req.body.fullName){
         user.fullName=fullName;
     }
     if(req.file){
