@@ -25,26 +25,30 @@ const courseSchema = new Schema({
     thumbnail: {
         public_id: {
             type: String,
-            required:true,
+            default:"Dummy"  ,
+              // required:true          
         },
         secure_url: {
             type: String,
-            required:true
+            default:"Dummy"  ,
+            // required:true
         }
     },
     lectures: [
         {
             title: String,
-            description: String,
+            discription: String,
 
             lecture: {
                 public_id: {
                     type: String,
+                    default:"dummy",
                     required:true,
                 },
                 secure_url: {
                     type: String,
                     required:true,
+                    default:"dummy"
                 }
             }
 
