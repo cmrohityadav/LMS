@@ -42,6 +42,10 @@ role:{
     type:String,
     enum:['USER','ADMIN'],
     default: 'USER'
+},
+subscription:{
+    id: String,
+    status:String
 }
 
 
