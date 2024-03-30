@@ -17,6 +17,6 @@ const paymentSchema=new Schema({
 },{timestamps:true})
 
 
-const Payement=mongoose.model("Payment",paymentSchema)
-export default Payement
+const Payment=mongoose.model("Payment",paymentSchema)
+export default Payment
 

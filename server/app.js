@@ -2,7 +2,7 @@ import express from "express";
 import cors from "cors"
 import cookieParser from "cookie-parser";
 import morgan from "morgan";
-
+import Razorpay from "razorpay"
 const app=express()
 
 app.use(express.json({}))
@@ -23,6 +23,11 @@ cloudinary.config({
   api_key:process.env.CLOUDINARY_API_KEY, 
   api_secret:process.env.CLOUDINARY_API_SECRET,
 });
+
+export const razorpay=new Razorpay({
+   key_id:process.env.RAZORPAY_KEY_ID,
+   key_secret:process.env.RAZORPAY_SECRET
+})
 
 // import router
 import userRouter from "./routes/user.Router.js"
