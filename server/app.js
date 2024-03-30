@@ -33,7 +33,7 @@ import errorMiddleware from "./middlewares/error.middleware.js";
 // routes 
 app.use('/api/v1/user',userRouter)
 app.use('/api/v1/course',courseRouter)
-app.use('/api/v1/course',paymentRouterRouter)
+app.use('/api/v1/payment',paymentRouter)
 
 
 
