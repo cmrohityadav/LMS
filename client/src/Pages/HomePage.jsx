@@ -9,7 +9,7 @@ function HomePage() {
 
   <div className="pt-10 text-white flex items-center justify-center gap-10 mx-16 h-[90vh]">
         {/* for platform details */}
-        <div className="w-1/2 space-y-6">
+        <div className="sm:ml-64 m-1  space-y-6">
           <h1 className="text-5xl font-semibold">
             Find out best{" "}
             <span className="text-yellow-500 font-bold">Online Courses</span>
